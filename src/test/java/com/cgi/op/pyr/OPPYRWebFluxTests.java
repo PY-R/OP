@@ -107,9 +107,9 @@ public class OPPYRWebFluxTests {
     LOGGER.info("Transaction OUT : " + tOut);
     assertTrue(
         tOut != null
-            || tOut.getId() != null
-            || expectedStatus.equals(tOut.getStatus())
-            || tOut.getOrderLineList().size() == tIn.getOrderLineList().size());
+            && tOut.getId() != null
+            && expectedStatus.equals(tOut.getStatus())
+            && tOut.getOrderLineList().size() == tIn.getOrderLineList().size());
     return tOut;
   }
 
